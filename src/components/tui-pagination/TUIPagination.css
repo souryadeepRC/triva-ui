@@ -1,0 +1,14 @@
+.TUIPagination_root {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-end;
+  width: fit-content;
+}
+.TUIPagination_root .TUIPagination_btn {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
