@@ -1,5 +1,5 @@
-/* import RightArrow from "@mui/icons-material/KeyboardDoubleArrowRight";
-import LeftArrow from "@mui/icons-material/KeyboardDoubleArrowLeft"; */
+import LeftArrow from "@mui/icons-material/KeyboardDoubleArrowLeft";
+import RightArrow from "@mui/icons-material/KeyboardDoubleArrowRight";
 
 import "./TUIPagination.css";
 interface PageLevelProps {
@@ -26,8 +26,11 @@ const TUIPagination: React.FC<TUIPaginationProps> = (props) => {
   return (
     <section className="TUIPagination_root">
       {pageNo > 1 && (
-        <button className="TUIPagination_btn" onClick={() => onPageChange(pageNo - 1)}>
-          {/* <LeftArrow /> */}
+        <button
+          className="TUIPagination_btn"
+          onClick={() => onPageChange(pageNo - 1)}
+        >
+          <LeftArrow />
           &nbsp;{prevPageLevel}
         </button>
       )}
@@ -35,9 +38,12 @@ const TUIPagination: React.FC<TUIPaginationProps> = (props) => {
         Page {pageNo} of {totalPage}
       </span>
       {pageNo < totalPage && (
-        <button className="TUIPagination_btn" onClick={() => onPageChange(pageNo + 1)}>
+        <button
+          className="TUIPagination_btn"
+          onClick={() => onPageChange(pageNo + 1)}
+        >
           {nextPageLevel}&nbsp;
-          {/* <RightArrow /> */}
+          <RightArrow />
         </button>
       )}
     </section>
