@@ -1,18 +1,9 @@
 import LeftArrow from "@mui/icons-material/KeyboardDoubleArrowLeft";
 import RightArrow from "@mui/icons-material/KeyboardDoubleArrowRight";
+import { TUIPaginationProps } from "./types";
 
 import "./TUIPagination.css";
-interface PageLevelProps {
-  prev?: string;
-  next?: string;
-}
-interface TUIPaginationProps {
-  pageNo: number;
-  totalPage: number;
-  hasPrevNextLevel?: boolean;
-  pageLevel?: PageLevelProps;
-  onPageChange: (pageNo: number) => void;
-}
+
 const TUIPagination: React.FC<TUIPaginationProps> = (props) => {
   const {
     pageNo,
@@ -23,6 +14,7 @@ const TUIPagination: React.FC<TUIPaginationProps> = (props) => {
   } = props || {};
   const prevPageLevel = hasPrevNextLevel ? pageLevel?.prev || "Prev" : "";
   const nextPageLevel = hasPrevNextLevel ? pageLevel?.next || "Next" : "";
+  if (!pageNo || !totalPage) return <></>;
   return (
     <section className="TUIPagination_root">
       {pageNo > 1 && (
