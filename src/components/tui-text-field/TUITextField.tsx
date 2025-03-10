@@ -6,8 +6,8 @@ const TUITextField = (props: TUITextFieldProps) => {
     label,
     type = "text",
     className = "",
-    errorMessage="",
-    helperText="",
+    errorMessage = "",
+    helperText = "",
     inputProps,
     dataTestId,
     id,
@@ -17,10 +17,13 @@ const TUITextField = (props: TUITextFieldProps) => {
     ...rest
   } = props || {};
   const isError: boolean = errorMessage !== "";
+
   return (
     <div
       id={id}
-      className={`TUIText_field__container ${className} ${isError ? "TUIText__error" : ""} 
+      className={`TUIText_field__container ${className} ${
+        isError ? "TUIText__error" : ""
+      } 
       ${fullWidth ? "TUIText__fullWidth" : ""}`}
       data-testid={dataTestId || "tui-text-field"}
     >
