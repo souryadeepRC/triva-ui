@@ -4,4 +4,13 @@ import TUITable from "./components/tui-table/TUITable";
 import TUITextField from "./components/tui-text-field/TUITextField";
 import TUIModal from "./components/tui-modal/TUIModal";
 
-export { TUIPagination, TUISearch, TUITable, TUITextField, TUIModal };
+import useToggle from "./hooks/useToggle";
+
+export {
+  TUIPagination,
+  TUISearch,
+  TUITable,
+  TUITextField,
+  TUIModal,
+  useToggle,
+};
