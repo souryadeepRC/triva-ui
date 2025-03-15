@@ -14,6 +14,7 @@ const TUITextField = (props: TUITextFieldProps) => {
     value,
     onChange,
     fullWidth,
+    isRequired = false,
     ...rest
   } = props || {};
   const isError: boolean = errorMessage !== "";
@@ -27,7 +28,10 @@ const TUITextField = (props: TUITextFieldProps) => {
       ${fullWidth ? "TUIText__fullWidth" : ""}`}
       data-testid={dataTestId || "tui-text-field"}
     >
-      <label>{label}</label>
+      <label>
+        {label}
+        {isRequired && <span>&nbsp;*</span>}
+      </label>
       {helperText && <span className="helper__text">{helperText}</span>}
       <input
         {...inputProps}

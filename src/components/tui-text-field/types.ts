@@ -10,4 +10,5 @@ export interface TUITextFieldProps extends React.HTMLProps<HTMLInputElement> {
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   inputProps?: object;
   dataTestId?: string;
+  isRequired?:boolean;
 }

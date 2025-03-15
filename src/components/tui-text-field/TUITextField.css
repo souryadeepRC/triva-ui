@@ -10,6 +10,9 @@
 .TUIText_field__container label {
   font-size: 1.1rem;
 }
+.TUIText_field__container label span {
+  color: #d32f2f;
+}
 
 .TUIText_field__container input {
   outline: none;
