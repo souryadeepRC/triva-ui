@@ -17,7 +17,7 @@
 .TUIText_field__container input {
   outline: none;
   box-sizing: border-box;
-  padding: 10px 15px;
+padding: 10px 15px;
   border: 0;
   border-bottom: 1px solid #0000009e;
   box-shadow: 5px 3px 12px 1px #808080a3;

@@ -1,0 +1,69 @@
+.TUIPassword_rule_popover__container {
+  position: relative;
+  display: inline-block;
+}
+
+.TUIPassword_rule_popover__container .MuiIconButton-root {
+  padding: 5px;
+  background-color: black;
+  color: white;
+}
+
+.TUIPassword_rule_popover__container .MuiIconButton-root:hover {
+  background-color: black;
+}
+
+.TUIPassword_rule_popover__container .MuiIconButton-root .MuiSvgIcon-root {
+  font-size: 1rem;
+}
+
+.TUIPassword_rule_popover__content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(100%) translateY(-5%);
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  z-index: 1000;
+  max-width: 80vw;
+  width: fit-content;
+  text-align: center;
+}
+
+.TUIPassword_rule_popover__content .password__rule {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  font-size: 0.8rem;
+}
+
+.TUIPassword_rule_popover__content .password__rule .MuiSvgIcon-root {
+  font-size: inherit;
+}
+
+.TUIPassword_rule_popover__content .password__rule.pass {
+  color: green;
+}
+
+.TUIPassword_rule_popover__content .password__rule.fail {
+  color: red;
+}
+
+.TUIPassword_field__container .rule__outer {
+  width: inherit;
+  height: 6px;
+  background-color: red;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.TUIPassword_field__container .rule__outer .rule__inner {
+  width: 50%;
+  height: inherit;
+  background-color: #139813;
+}
