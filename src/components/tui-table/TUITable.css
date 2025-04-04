@@ -52,6 +52,50 @@
 
 .TUITable_container .TUITable_header h2 {
   margin: 0;
-  color: black;
+  color: rgb(206, 23, 23);
   text-shadow: 1px 1px 1px rgba(169, 169, 169, 0.2);
+}
+.TUI__actions {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+.TUITable__container {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .TUITable_container .TUITable_root {
+    display: none;
+  }
+  .TUITable__container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 35px;
+    margin: 10px 0;
+    align-items: center;
+    max-height: 45vh;
+    overflow: hidden auto;
+  }
+
+  .TUITable__container .TUITable__content {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 5px 2px lightgray;
+    padding: 15px;
+    width: 75vw;
+  }
+  .TUITable__container .TUITable__content p {
+    margin: 2px 0;
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .TUITable__container .TUITable__content svg {
+    font-size: 16px;
+  }
+  .TUI__actions {
+    justify-content: flex-end;
+  }
 }

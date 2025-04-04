@@ -1,7 +1,8 @@
+import { forwardRef } from "react";
 import "./TUITextField.css";
 import { TUITextFieldProps } from "./types";
 
-const TUITextField = (props: TUITextFieldProps) => {
+const TUITextField = forwardRef((props: TUITextFieldProps, ref: any) => {
   const {
     label,
     type = "text",
@@ -34,6 +35,7 @@ const TUITextField = (props: TUITextFieldProps) => {
       </label>
       {helperText && <span className="helper__text">{helperText}</span>}
       <input
+        ref={ref}
         {...inputProps}
         type={type}
         value={value}
@@ -43,5 +45,5 @@ const TUITextField = (props: TUITextFieldProps) => {
       {errorMessage && <span className="error__msg">{errorMessage}</span>}
     </div>
   );
-};
+});
 export default TUITextField;

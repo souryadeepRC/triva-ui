@@ -5,10 +5,10 @@ export interface TUITableProps<T extends object> {
   emptyRecords?: string | React.ReactElement;
   showPagination?: boolean;
   pagination?: PaginationProps | undefined;
+  actions?: Array<T>;
 }
 export interface PaginationProps {
   pageSize?: number;
-
 }
 export interface ColumnDef<T extends object> {
   label: string;

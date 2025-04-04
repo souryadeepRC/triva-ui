@@ -11,6 +11,7 @@ const TUITable: React.FC<TUITableProps<Object>> = (props) => {
     columns,
     title,
     data,
+    actions,
     emptyRecords = "No Records Found",
     showPagination = false,
     pagination = {},
@@ -42,6 +43,7 @@ const TUITable: React.FC<TUITableProps<Object>> = (props) => {
             {columns.map((column: ColumnDef<Object>) => {
               return <th key={column.key}>{column.label}</th>;
             })}
+            {actions?.length && <th>Actions</th>}
           </tr>
         </thead>
         <tbody>
@@ -58,12 +60,58 @@ const TUITable: React.FC<TUITableProps<Object>> = (props) => {
                     if (!dataValue[key]) return <td key={key}></td>;
                     return <td key={key}>{dataValue[key]}</td>;
                   })}
+                  {actions?.length && (
+                    <td>
+                      <div className="TUI__actions">
+                        {actions.map(({ key, render }: any) => {
+                          if (render)
+                            return <div key={key}>{render(dataValue)}</div>;
+                        })}
+                      </div>
+                    </td>
+                  )}
                 </tr>
               );
             })
           )}
         </tbody>
       </table>
+      <div className="TUITable__container">
+        {tableRecords.map((dataValue: any, index: number) => {
+          return (
+            <div key={dataValue?.id || index} className="TUITable__content">
+              {actions?.length && (
+                <div className="TUI__actions">
+                  {actions.map(({ key, render }: any) => {
+                    if (render) return <div key={key}>{render(dataValue)}</div>;
+                  })}
+                </div>
+              )}
+              {columns.map(({ key, render }: any) => {
+                if (render)
+                  return (
+                    <p key={key}>
+                      <strong>{key} : </strong>
+                      {render(dataValue)}
+                    </p>
+                  );
+                if (!dataValue[key])
+                  return (
+                    <p key={key}>
+                      <strong>{key} : </strong>
+                    </p>
+                  );
+                return (
+                  <p key={key}>
+                    <strong>{key} : </strong>
+                    {dataValue[key]}
+                  </p>
+                );
+              })}
+            </div>
+          );
+        })}
+      </div>
       {showPagination && (
         <TUIPagination
           pageNo={pageNo}
