@@ -76,7 +76,7 @@ const TUITable: React.FC<TUITableProps<Object>> = (props) => {
           )}
         </tbody>
       </table>
-      <div className="TUITable__container">
+      <div className="TUITable__mobile_container">
         {tableRecords.map((dataValue: any, index: number) => {
           return (
             <div key={dataValue?.id || index} className="TUITable__content">
