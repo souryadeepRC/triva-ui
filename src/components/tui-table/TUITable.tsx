@@ -90,22 +90,22 @@ const TUITable: React.FC<TUITableProps<Object>> = (props) => {
               {columns.map(({ key, render }: any) => {
                 if (render)
                   return (
-                    <p key={key}>
+                    <div key={key}>
                       <strong>{key} : </strong>
                       {render(dataValue)}
-                    </p>
+                    </div>
                   );
                 if (!dataValue[key])
                   return (
-                    <p key={key}>
+                    <div key={key}>
                       <strong>{key} : </strong>
-                    </p>
+                    </div>
                   );
                 return (
-                  <p key={key}>
+                  <div key={key}>
                     <strong>{key} : </strong>
                     {dataValue[key]}
-                  </p>
+                  </div>
                 );
               })}
             </div>

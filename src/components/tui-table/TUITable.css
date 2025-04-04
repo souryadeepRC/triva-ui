@@ -85,7 +85,7 @@
     padding: 15px;
     width: 75vw;
   }
-  .TUITable__container .TUITable__content p {
+  .TUITable__container .TUITable__content div {
     margin: 2px 0;
     display: flex;
     gap: 10px;
