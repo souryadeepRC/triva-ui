@@ -5,6 +5,7 @@ import TUITextField from "./components/tui-text-field/TUITextField";
 import TUIModal from "./components/tui-modal/TUIModal";
 import TUIPassword from "./components/tui-password-field/TUIPassword";
 import useToggle from "./hooks/useToggle";
+import Button from "./components/Button/Button";
 
 export {
   TUIPagination,
@@ -14,4 +15,5 @@ export {
   TUIModal,
   useToggle,
   TUIPassword,
+  Button,
 };
