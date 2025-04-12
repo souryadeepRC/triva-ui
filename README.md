@@ -22,7 +22,7 @@ Build stunning interfaces effortlessly with beautifully styled, reusable React c
 
 Check out the interactive component documentation on **Storybook**:
 
-👉 [**View triva-ui in Storybook**](https://67f400a0e86956d7d139cf59-hibtmwlahr.chromatic.com/?path=/docs/introduction-welcome--docs)
+👉 [**View triva-ui in Storybook**](https://67f400a0e86956d7d139cf59-huqzsbomfs.chromatic.com/?path=/docs/introduction-welcome--docs)
 
 
 ## Implemented Technologies
