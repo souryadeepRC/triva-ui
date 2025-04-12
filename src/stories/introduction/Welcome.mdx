@@ -1,11 +1,69 @@
 import { Meta } from '@storybook/addon-docs';
 
 <Meta title="Introduction/Welcome" />
+# ✨ Triva UI
 
-# Welcome to Storybook!
+**A modern, customizable, and elegant UI component library**  
+Build stunning interfaces effortlessly with beautifully styled, reusable React components.
 
-This is your UI development environment.
+---
 
-- Explore components
-- Test UI states
-- Document your design system
+🎨 **Beautiful by default** – Clean, accessible designs out of the box  
+⚙️ **Fully customizable** – Easily adapt styles and behavior to your needs  
+⚡ **Built for speed** – Lightweight components using MUI and Framer Motion
+
+---
+
+
+## Version
+
+![image](https://img.shields.io/npm/v/react-web-theme)
+![image](https://img.shields.io/npm/dm/react-web-theme)
+![image](https://img.shields.io/github/last-commit/souryadeepRC/react-web-theme)
+
+
+## Implemented Technologies
+
+![image](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![image](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![image](https://img.shields.io/npm/v/motion?style=for-the-badge&logo=motion&logoColor=white&label=Motion
+)
+## Compatible With
+
+- React >=16.8.0
+- Typescript
+
+## Installation
+
+You can install React Web Theme via npm:
+
+```bash
+  npm install triva-ui
+```
+
+# Components
+
+### 📚 List of components
+
+- [🔧 Triva Option Menu](#-triva-option-menu) 
+
+## 📋 Triva Option Menu
+
+The `TrivaOptionMenu` is a customizable and animated dropdown menu component built with **React**, **MUI**, and **Framer Motion**. It's ideal for creating context menus or action dropdowns with smooth animations and flexible positioning.
+
+## 🧠 Usage
+
+```bash
+import { TrivaOptionMenu } from 'triva-ui';
+
+const actions = [
+  { label: "Edit", callback: () => console.log("Edit clicked") },
+  { label: "Delete", callback: () => console.log("Delete clicked") },
+];
+
+<TrivaOptionMenu
+  position="bottom-right" // or "bottom-left"
+  actions={actions}
+/>;
+
+```

@@ -1,0 +1,44 @@
+.option_menu__container {
+  position: relative;
+}
+
+.option_menu__container .menu__overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+}
+
+.option_menu__container .menu__overlay .menu__container {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 6px 15px 10px #021a1040;
+  width: 150px;
+  border-radius: 10px;
+}
+
+.option_menu__container .menu__overlay .menu__container ul {
+  margin: 0;
+  padding: 8px 0;
+}
+
+.option_menu__container .menu__overlay .menu__container ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  padding: 6px 16px;
+  border-bottom: 1px solid lightgray;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.option_menu__container .menu__overlay .menu__container ul li:last-child {
+  border: none;
+}
+
+.option_menu__container .menu__overlay .menu__container ul li .MuiSvgIcon-root {
+  font-size: inherit;
+}

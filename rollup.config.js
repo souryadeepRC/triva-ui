@@ -42,8 +42,12 @@ export default [
       commonjs(),
       replace({
         "'use client';": "",
+        '"use client";': "",
         delimiters: ["", ""],
-        include: path.resolve(configDirectory, "node_modules/@mui/**/**/*.js"),
+        include: [
+          path.resolve(configDirectory, "node_modules/@mui/**"),
+          path.resolve(configDirectory, "node_modules/framer-motion/**"),
+        ],
         preventAssignment: true,
       }),
       typescript({ tsconfig: "./tsconfig.json" }),
