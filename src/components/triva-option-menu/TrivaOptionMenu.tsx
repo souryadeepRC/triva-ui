@@ -1,7 +1,8 @@
 import { useRef } from "react";
+import ReactDOM from "react-dom";
 import { IconButton } from "@mui/material";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import ActionList from "./ActionList";
 import { useToggle, useActionPosition } from "../../hooks";
 import { MenuPosition, PositionType, TrivaOptionMenuProps } from "./types";
@@ -46,28 +47,34 @@ const TrivaOptionMenu: React.FC<TrivaOptionMenuProps> = ({
 
   const actionMenuPosition = alterOptionPosition(optionPosition, position);
   return (
-    <div className="option_menu__container">
-      <IconButton
-        onClick={handleIconClick}
-        ref={buttonRef}
-        id="triva_otpion_menu__icon"
-        data-testId="triva_option_menu__icon"
-        aria-label="Option Menu Icon"
-      >
-        {MenuIcon || <MoreVertIcon />}
-      </IconButton>
-
-      {isOpen && (
-        <div className="menu__overlay" onClick={toggleOpen}>
-          <motion.div
-            className="menu__container"
-            {...dropdownAnimation(actionMenuPosition)}
+    <>
+      <div className="Triva_Option_menu">
+        <IconButton
+          onClick={handleIconClick}
+          ref={buttonRef}
+          data-testId="triva_option_menu__icon"
+          aria-label="Option Menu Icon"
+        >
+          {MenuIcon || <MoreVertIcon />}
+        </IconButton>
+      </div>
+      {isOpen &&
+        ReactDOM.createPortal(
+          <div
+            role="presentation"
+            className="Triva_Menu__overlay"
+            onClick={toggleOpen}
           >
-            <ActionList actions={actions} onActionClick={handleActionClick} />
-          </motion.div>
-        </div>
-      )}
-    </div>
+            <motion.div
+              className="Triva_Menu__container"
+              {...dropdownAnimation(actionMenuPosition)}
+            >
+              <ActionList actions={actions} onActionClick={handleActionClick} />
+            </motion.div>
+          </div>,
+          document.body
+        )}
+    </>
   );
 };
 

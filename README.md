@@ -11,7 +11,6 @@ Build stunning interfaces effortlessly with beautifully styled, reusable React c
 
 ---
 
-
 ## Version
 
 ![image](https://img.shields.io/npm/v/react-web-theme)
@@ -24,13 +23,12 @@ Check out the interactive component documentation on **Storybook**:
 
 👉 [**View triva-ui in Storybook**](https://67f400a0e86956d7d139cf59-huqzsbomfs.chromatic.com/?path=/docs/introduction-welcome--docs)
 
-
 ## Implemented Technologies
 
 ![image](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![image](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![image](https://img.shields.io/npm/v/motion?style=for-the-badge&logo=motion&logoColor=white&label=Motion
-)
+![image](https://img.shields.io/npm/v/motion?style=for-the-badge&logo=motion&logoColor=white&label=Motion)
+
 ## Compatible With
 
 - React >=16.8.0
@@ -48,8 +46,8 @@ You can install React Web Theme via npm:
 
 ### 📚 List of components
 
-- [🔧 Triva Option Menu](#-triva-option-menu) 
-
+- [🔧 Triva Modal](#-triva-modal)
+- [🔧 Triva Option Menu](#-triva-option-menu)
 
 ## TUIPagination
 
@@ -59,21 +57,31 @@ You can install React Web Theme via npm:
 
 ## TUITextField
 
-## TUIModal
+## 📋 Triva Modal
+
+The `TrivaModal` is a customizable and animated dialog box component built with **React**, **MUI**, and **Framer Motion**. It's ideal for creating modal with title , close icon or action buttons with smooth animations and flexible positioning.
+
+## 🧠 Usage
+
+```tsx
+import { TrivaModal } from "triva-ui";
+```
+
+```tsx
+<TrivaModal
+  onClose={() => {}}
+  primaryAction={<button>Agree</button>}
+  secondaryAction={<button>Cancel</button>}
+  size="md"
+  title="Sample Modal"
+>
+    <h1>Modal information<h1>
+</TrivaModal>;
+```
 
 ## 📋 Triva Option Menu
 
 The `TrivaOptionMenu` is a customizable and animated dropdown menu component built with **React**, **MUI**, and **Framer Motion**. It's ideal for creating context menus or action dropdowns with smooth animations and flexible positioning.
-
----
-
-## ✨ Features
-
-- ✅ Customizable menu trigger icon
-- ✅ Animated dropdown using `motion`
-- ✅ Auto-positioning based on trigger element
-- ✅ Lightweight and easily composable
-- ✅ Built with accessibility in mind
 
 ---
 
@@ -93,16 +101,6 @@ const actions = [
 />;
 
 ```
-
-## 🔧 Props
-
-| Prop       | Type                                              | Default             | Description                                                   |
-|------------|---------------------------------------------------|---------------------|---------------------------------------------------------------|
-| `position` | `"bottom-left"` \| `"bottom-right"`              | `"bottom-left"`     | Sets the dropdown menu's alignment relative to the icon.     |
-| `MenuIcon` | `React.ReactNode`                                 | `<MoreVertIcon />`  | Custom icon for the trigger button.                           |
-| `actions`  | `Array<{ label: string; callback: () => void }>` | **Required**        | Array of action items with labels and callbacks.              |
-
----
 
 # Hooks
 
