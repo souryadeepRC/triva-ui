@@ -1,8 +1,8 @@
-.option_menu__container {
+.Triva_Option_menu {
   position: relative;
 }
 
-.option_menu__container .menu__overlay {
+.Triva_Menu__overlay {
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -11,7 +11,7 @@
   z-index: 1500;
 }
 
-.option_menu__container .menu__overlay .menu__container {
+.Triva_Menu__overlay .Triva_Menu__container {
   position: absolute;
   background-color: white;
   box-shadow: 0 6px 15px 10px #021a1040;
@@ -19,12 +19,12 @@
   border-radius: 10px;
 }
 
-.option_menu__container .menu__overlay .menu__container ul {
+.Triva_Menu__overlay .Triva_Menu__container ul {
   margin: 0;
   padding: 8px 0;
 }
 
-.option_menu__container .menu__overlay .menu__container ul li {
+.Triva_Menu__overlay .Triva_Menu__container ul li {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -35,10 +35,10 @@
   cursor: pointer;
 }
 
-.option_menu__container .menu__overlay .menu__container ul li:last-child {
+.Triva_Menu__overlay .Triva_Menu__container ul li:last-child {
   border: none;
 }
 
-.option_menu__container .menu__overlay .menu__container ul li .MuiSvgIcon-root {
+.Triva_Menu__overlay .Triva_Menu__container ul li .MuiSvgIcon-root {
   font-size: inherit;
 }

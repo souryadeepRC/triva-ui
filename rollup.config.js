@@ -47,6 +47,7 @@ export default [
         include: [
           path.resolve(configDirectory, "node_modules/@mui/**"),
           path.resolve(configDirectory, "node_modules/framer-motion/**"),
+          path.resolve(configDirectory, "node_modules/motion/**"),
         ],
         preventAssignment: true,
       }),

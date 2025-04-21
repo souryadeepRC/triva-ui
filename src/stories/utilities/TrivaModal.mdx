@@ -1,0 +1,35 @@
+import { Canvas, Meta, Story, ArgTypes, Stories } from "@storybook/addon-docs";
+import * as stories from "./TrivaModal.stories";
+import TrivaModal from "../../components/triva-modal/TrivaModal";
+
+<Meta of={stories} />
+
+# 📋 Triva Modal
+
+The `TrivaModal` is a customizable and animated dialog box component built with **React**, **MUI**, and **Framer Motion**. It's ideal for creating modal with title , close icon or action buttons with smooth animations and flexible positioning.
+
+## 🧠 Usage
+
+```tsx
+import { TrivaModal } from "triva-ui";
+```
+
+```tsx
+<TrivaModal
+  onClose={() => {}}
+  primaryAction={<button>Agree</button>}
+  secondaryAction={<button>Cancel</button>}
+  size="md"
+  title="Sample Modal"
+>
+    <h1>Modal information<h1>
+</TrivaModal>;
+```
+
+## Sample Stories
+
+<Stories />
+
+## Properties
+
+<ArgTypes />
